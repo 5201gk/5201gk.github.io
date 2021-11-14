@@ -149,95 +149,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/14/vue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gk">
-      <meta itemprop="description" content="Code is my life">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gk的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/14/vue/" class="post-title-link" itemprop="url">vue</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-11-14 17:33:28 / 修改时间：17:33:54" itemprop="dateCreated datePublished" datetime="2021-11-14T17:33:28+08:00">2021-11-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-Vue-是什么？"><a href="#1-Vue-是什么？" class="headerlink" title="1. Vue 是什么？"></a>1. Vue 是什么？</h2><pre><code>1. Vue 是一个 JavaScript 渐进式框架
-</code></pre>
-<h2 id="2-什么是渐进式？"><a href="#2-什么是渐进式？" class="headerlink" title="2. 什么是渐进式？"></a>2. 什么是渐进式？</h2><pre><code>1. 渐进式就是按需逐渐集成功能
-</code></pre>
-<h2 id="3-什么是库和框架？"><a href="#3-什么是库和框架？" class="headerlink" title="3. 什么是库和框架？"></a>3. 什么是库和框架？</h2><pre><code>1. 库是方法的集合，而框架是一套拥有自己规则的语法
-</code></pre>
-<h2 id="4-如何创建一个开箱即用的脚手架项目？"><a href="#4-如何创建一个开箱即用的脚手架项目？" class="headerlink" title="4. 如何创建一个开箱即用的脚手架项目？"></a>4. 如何创建一个开箱即用的脚手架项目？</h2><pre><code>1. vue create 项目名
-</code></pre>
-<h2 id="5-如何在网页上浏览这个项目？"><a href="#5-如何在网页上浏览这个项目？" class="headerlink" title="5. 如何在网页上浏览这个项目？"></a>5. 如何在网页上浏览这个项目？</h2><pre><code>1. yarn serve 启动本地热更新开发服务器
-</code></pre>
-<h2 id="6-如何创建脚手架项目"><a href="#6-如何创建脚手架项目" class="headerlink" title="6. 如何创建脚手架项目?"></a>6. 如何创建脚手架项目?</h2><pre><code>1. vue create 项目名, 得到一套标准文件夹+文件+webpack 环境
-</code></pre>
-<h2 id="7-脚手架项目入口有哪些"><a href="#7-脚手架项目入口有哪些" class="headerlink" title="7. 脚手架项目入口有哪些?"></a>7. 脚手架项目入口有哪些?</h2><pre><code>1. main.js - webpack 打包入口
-2. App.vue - Vue 页面入口
-3. index.html - 网页入口
-</code></pre>
-<h2 id="8-vue-指令？"><a href="#8-vue-指令？" class="headerlink" title="8. vue 指令？"></a>8. vue 指令？</h2><h3 id="1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”"><a href="#1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”" class="headerlink" title="1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”"></a>1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”</h3><h3 id="2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”"><a href="#2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”" class="headerlink" title="2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”"></a>2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”</h3><pre><code>   1. Vue 事件处理函数，如何拿到事件对象？
-      1. 无实参，直接用第一个形参接收
-      2. 有实参，手动传入$event
-   2. Vue 有哪些主要修饰符，都有什么功能？
-      1. .stop - 阻止事件冒泡
-      2. .prevent - 阻止默认行为
-</code></pre>
-<h3 id="3-v-model-暂时只能用在表单标签上-把-Vue-的数据变量和表单的-value-属性双向绑定在一起"><a href="#3-v-model-暂时只能用在表单标签上-把-Vue-的数据变量和表单的-value-属性双向绑定在一起" class="headerlink" title="3. v-model 暂时只能用在表单标签上 把 Vue 的数据变量和表单的 value 属性双向绑定在一起"></a>3. v-model 暂时只能用在表单标签上 把 Vue 的数据变量和表单的 value 属性双向绑定在一起</h3><pre><code>   1. 下拉菜单 v-model 写在哪里？
-      1. v-model 写在 select 上，value 写在 option 上, Vue 变量关联 value 属性的值
-   2. v-model 用在复选框时，需要注意什么？
-      1. 非数组 - 关联的是 checked 属性
-      2. 数组 - 关联的是 value 属性
-   3. Vue 变量初始值会不会影响表单的默认状态？
-      1. 会影响，因为双向数据绑定 - 互相影响
-</code></pre>
-<h2 id="4-v-html-设置标签显示内容-会覆盖插值表达式中的内容"><a href="#4-v-html-设置标签显示内容-会覆盖插值表达式中的内容" class="headerlink" title="4. v-html 设置标签显示内容 会覆盖插值表达式中的内容"></a>4. v-html 设置标签显示内容 会覆盖插值表达式中的内容</h2><h2 id="5-v-show-用-css-的方式隐藏-v-if-从-DOM-树中直接移除-添加-可以配合-v-else-使用"><a href="#5-v-show-用-css-的方式隐藏-v-if-从-DOM-树中直接移除-添加-可以配合-v-else-使用" class="headerlink" title="5. v-show 用 css 的方式隐藏 v-if 从 DOM 树中直接移除/添加 可以配合 v-else 使用"></a>5. v-show 用 css 的方式隐藏 v-if 从 DOM 树中直接移除/添加 可以配合 v-else 使用</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/14/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,7 +288,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
