@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-15 15:00:12" itemprop="dateModified" datetime="2021-11-15T15:00:12+08:00">2021-11-15</time>
+                <time title="修改时间：2021-11-15 16:34:55" itemprop="dateModified" datetime="2021-11-15T16:34:55+08:00">2021-11-15</time>
               </span>
 
           
@@ -286,7 +286,7 @@
 <h6 id="2-子组件在恰当的时间触发事件"><a href="#2-子组件在恰当的时间触发事件" class="headerlink" title="2.子组件在恰当的时间触发事件"></a>2.子组件在恰当的时间触发事件</h6><h6 id="3-使用-this-emit-‘自定义事件名’，参数-1，参数-2-方法触发父组件绑定的自定义事件"><a href="#3-使用-this-emit-‘自定义事件名’，参数-1，参数-2-方法触发父组件绑定的自定义事件" class="headerlink" title="3.使用 this.$emit(‘自定义事件名’，参数 1，参数 2) 方法触发父组件绑定的自定义事件"></a>3.使用 this.$emit(‘自定义事件名’，参数 1，参数 2) 方法触发父组件绑定的自定义事件</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; intro &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; num &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;fn&quot;&gt;+num&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: [&quot;intro&quot;, &quot;index&quot;, &quot;num&quot;],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fn() &#123;</span><br><span class="line">      this.$emit(&quot;sub&quot;, this.index, 1)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>注意：这里在父组件中 @事件类型=’处理函数‘   在methods中 声明这个函数，在子组件中 this.$emit(‘事件类型’，[参数1]，[参数2]) (   [  ]  中的内容表示可要可不要)</p>
+<p>注意：这里在父组件中 @自定义事件=’处理函数‘   在methods中 声明这个函数，在子组件中 this.$emit(‘自定义事件’，[参数1]，[参数2]) (   [  ]  中的内容表示可要可不要)</p>
 </blockquote>
 
       
