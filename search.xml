@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Study Vue Follow Gk</title>
+    <url>/2021/09/14/vue/</url>
+    <content><![CDATA[<h1 id="Day01"><a href="#Day01" class="headerlink" title="Day01"></a>Day01</h1><h2 id="1-Vue-是什么？"><a href="#1-Vue-是什么？" class="headerlink" title="1. Vue 是什么？"></a>1. Vue 是什么？</h2><pre><code>1. Vue 是一个 JavaScript 渐进式框架
+</code></pre>
+<h2 id="2-什么是渐进式？"><a href="#2-什么是渐进式？" class="headerlink" title="2. 什么是渐进式？"></a>2. 什么是渐进式？</h2><pre><code>1. 渐进式就是按需逐渐集成功能
+</code></pre>
+<h2 id="3-什么是库和框架？"><a href="#3-什么是库和框架？" class="headerlink" title="3. 什么是库和框架？"></a>3. 什么是库和框架？</h2><pre><code>1. 库是方法的集合，而框架是一套拥有自己规则的语法
+</code></pre>
+<h2 id="4-如何创建一个开箱即用的脚手架项目？"><a href="#4-如何创建一个开箱即用的脚手架项目？" class="headerlink" title="4. 如何创建一个开箱即用的脚手架项目？"></a>4. 如何创建一个开箱即用的脚手架项目？</h2><pre><code>1. vue create 项目名
+</code></pre>
+<h2 id="5-如何在网页上浏览这个项目？"><a href="#5-如何在网页上浏览这个项目？" class="headerlink" title="5. 如何在网页上浏览这个项目？"></a>5. 如何在网页上浏览这个项目？</h2><pre><code>1. yarn serve 启动本地热更新开发服务器
+</code></pre>
+<h2 id="6-如何创建脚手架项目"><a href="#6-如何创建脚手架项目" class="headerlink" title="6. 如何创建脚手架项目?"></a>6. 如何创建脚手架项目?</h2><pre><code>1. vue create 项目名, 得到一套标准文件夹+文件+webpack 环境
+</code></pre>
+<h2 id="7-脚手架项目入口有哪些"><a href="#7-脚手架项目入口有哪些" class="headerlink" title="7. 脚手架项目入口有哪些?"></a>7. 脚手架项目入口有哪些?</h2><pre><code>1. main.js - webpack 打包入口
+2. App.vue - Vue 页面入口
+3. index.html - 网页入口
+</code></pre>
+<h2 id="8-vue-指令？"><a href="#8-vue-指令？" class="headerlink" title="8. vue 指令？"></a>8. vue 指令？</h2><h6 id="1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”"><a href="#1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”" class="headerlink" title="1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”"></a>1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”</h6><h6 id="2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”"><a href="#2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”" class="headerlink" title="2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”"></a>2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”</h6><pre><code>   1. Vue 事件处理函数，如何拿到事件对象？
+      1. 无实参，直接用第一个形参接收
+      2. 有实参，手动传入$event
+   2. Vue 有哪些主要修饰符，都有什么功能？
+      1. .stop - 阻止事件冒泡
+      2. .prevent - 阻止默认行为
+</code></pre>
+<h6 id="3-v-model-暂时只能用在表单标签上-把-Vue-的数据变量和表单的-value-属性双向绑定在一起"><a href="#3-v-model-暂时只能用在表单标签上-把-Vue-的数据变量和表单的-value-属性双向绑定在一起" class="headerlink" title="3. v-model 暂时只能用在表单标签上 把 Vue 的数据变量和表单的 value 属性双向绑定在一起"></a>3. v-model 暂时只能用在表单标签上 把 Vue 的数据变量和表单的 value 属性双向绑定在一起</h6><pre><code>   1. 下拉菜单 v-model 写在哪里？
+      1. v-model 写在 select 上，value 写在 option 上, Vue 变量关联 value 属性的值
+   2. v-model 用在复选框时，需要注意什么？
+      1. 非数组 - 关联的是 checked 属性
+      2. 数组 - 关联的是 value 属性
+   3. Vue 变量初始值会不会影响表单的默认状态？
+      1. 会影响，因为双向数据绑定 - 互相影响
+</code></pre>
+<h6 id="4-v-html-设置标签显示内容-会覆盖插值表达式中的内容"><a href="#4-v-html-设置标签显示内容-会覆盖插值表达式中的内容" class="headerlink" title="4. v-html 设置标签显示内容 会覆盖插值表达式中的内容"></a>4. v-html 设置标签显示内容 会覆盖插值表达式中的内容</h6><h6 id="5-v-show-用-css-的方式隐藏-v-if-从-DOM-树中直接移除-添加-可以配合-v-else-使用"><a href="#5-v-show-用-css-的方式隐藏-v-if-从-DOM-树中直接移除-添加-可以配合-v-else-使用" class="headerlink" title="5. v-show 用 css 的方式隐藏 v-if 从 DOM 树中直接移除/添加 可以配合 v-else 使用"></a>5. v-show 用 css 的方式隐藏 v-if 从 DOM 树中直接移除/添加 可以配合 v-else 使用</h6><h1 id="Day02"><a href="#Day02" class="headerlink" title="Day02"></a>Day02</h1><h2 id="1-v-for-的更新机制"><a href="#1-v-for-的更新机制" class="headerlink" title="1.v-for 的更新机制"></a>1.v-for 的更新机制</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.数组更新方法，就会导致 v-for 更新，页面更新</span><br><span class="line">2.数组非变更方法, 返回新数组, 就不会导致v-for更新, 可采用覆盖数组或this.$set()</span><br><span class="line">这些方法会触发数组改变, v-for会监测到并更新页面</span><br><span class="line"></span><br><span class="line">- `push()`</span><br><span class="line">- `pop()`</span><br><span class="line">- `shift()`</span><br><span class="line">- `unshift()`</span><br><span class="line">- `splice()`</span><br><span class="line">- `sort()`</span><br><span class="line">- `reverse()`</span><br><span class="line"></span><br><span class="line">这些方法不会触发v-for更新</span><br><span class="line"></span><br><span class="line">- `slice()`</span><br><span class="line">- `filter()` // 创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素</span><br><span class="line">- `concat()` // 用于连接两个或多个数组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>总结: 改变原数组的方法才能让 v-for 更新</p>
+</blockquote>
+<h2 id="2-Vue-基础-v-for-就地更新"><a href="#2-Vue-基础-v-for-就地更新" class="headerlink" title="2. Vue 基础_v-for 就地更新"></a>2. Vue 基础_v-for 就地更新</h2><h4 id="1-无-key"><a href="#1-无-key" class="headerlink" title="1.无 key"></a>1.无 key</h4><p>1.就地更新</p>
+<p>2.根据下标，一个一个对比子元素的虚拟 DOM</p>
+<p>3.缺点：如果子元素的顺序发生变化，性能不高</p>
+<h4 id="2-有-key"><a href="#2-有-key" class="headerlink" title="2.有 key"></a>2.有 key</h4><p>1.根据 key 进行复用</p>
+<p>2.子元素的顺序就算发生了改变，也没影响</p>
+<h2 id="3-对于-style-和-class-v-bind-进行的增强，值不仅仅可以是字符串，还可以是对象和数组"><a href="#3-对于-style-和-class-v-bind-进行的增强，值不仅仅可以是字符串，还可以是对象和数组" class="headerlink" title="3.对于 style 和 class,v-bind 进行的增强，值不仅仅可以是字符串，还可以是对象和数组"></a>3.对于 style 和 class,v-bind 进行的增强，值不仅仅可以是字符串，还可以是对象和数组</h2><h2 id="4-计算属性"><a href="#4-计算属性" class="headerlink" title="4.计算属性"></a>4.计算属性</h2><h4 id="1-写在-computed-中的属性就叫计算属性，-computed-中的是需要经过逻辑运算的"><a href="#1-写在-computed-中的属性就叫计算属性，-computed-中的是需要经过逻辑运算的" class="headerlink" title="1.写在 computed 中的属性就叫计算属性， computed 中的是需要经过逻辑运算的"></a>1.写在 computed 中的属性就叫计算属性， computed 中的是需要经过逻辑运算的</h4><h5 id="1-注意点"><a href="#1-注意点" class="headerlink" title="1.注意点"></a>1.注意点</h5><pre><code>    1. 计算属性写在computed中
+    2. 计算属性写法上是一个函数或者是一个对象
+    3. 计算属性使用的时候不能加()
+</code></pre>
+<h5 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h5><h6 id="1-获取"><a href="#1-获取" class="headerlink" title="1.获取"></a>1.获取</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">computed: &#123; <span class="function"><span class="title">full</span>(<span class="params"></span>)</span> &#123;<span class="keyword">return</span> ...&#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-获取且修改"><a href="#2-获取且修改" class="headerlink" title="2.获取且修改"></a>2.获取且修改</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">computed: &#123; <span class="function"><span class="title">get</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="function"><span class="title">set</span>(<span class="params">value</span>)</span>&#123;&#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-缓存"><a href="#3-缓存" class="headerlink" title="3.缓存"></a>3.缓存</h5><p>1.计算属性只会计算一次，就会把结果存储起来，多次使用计算属性，只需要计算一次<br>​ 2.如果依赖的属性发生了改变，计算属性会重新计算一次</p>
+<h4 id="监听属性"><a href="#监听属性" class="headerlink" title="监听属性"></a>监听属性</h4><h5 id="需要监听某个属性是否发生改变，就需要使用-watch-语法"><a href="#需要监听某个属性是否发生改变，就需要使用-watch-语法" class="headerlink" title="需要监听某个属性是否发生改变，就需要使用 watch 语法"></a>需要监听某个属性是否发生改变，就需要使用 watch 语法</h5><h6 id="1-简单类型"><a href="#1-简单类型" class="headerlink" title="1.简单类型"></a>1.简单类型</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;  <span class="function"><span class="title">msg</span>(<span class="params">value</span>)</span> &#123;&#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-复杂类型"><a href="#2-复杂类型" class="headerlink" title="2.复杂类型"></a>2.复杂类型</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;  <span class="attr">friend</span>: &#123; <span class="attr">deep</span>: <span class="literal">true</span>, <span class="function"><span class="title">handler</span>(<span class="params"></span>)</span>&#123;&#125;&#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Day03"><a href="#Day03" class="headerlink" title="Day03"></a>Day03</h1><h2 id="1-使用组件的步骤"><a href="#1-使用组件的步骤" class="headerlink" title="1.使用组件的步骤"></a>1.使用组件的步骤</h2><h6 id="1-准备组件-并-引入"><a href="#1-准备组件-并-引入" class="headerlink" title="1.准备组件 并 引入"></a>1.准备组件 并 引入</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Pannel <span class="keyword">from</span> <span class="string">&quot;./components/Pannel&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="2-注册组件"><a href="#2-注册组件" class="headerlink" title="2.注册组件"></a>2.注册组件</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">//  局部 - 注册组件</span></span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">    语法: </span></span><br><span class="line"><span class="comment">    components: &#123;</span></span><br><span class="line"><span class="comment">      &quot;组件名&quot;: 组件对象</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="attr">PannelL</span>: Pannel</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-使用组件"><a href="#3-使用组件" class="headerlink" title="3.使用组件"></a>3.使用组件</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;h3&gt;案例：折叠面板&lt;/h3&gt;</span><br><span class="line">    &lt;!-- 4. 组件名当做标签使用 --&gt;</span><br><span class="line">    &lt;!-- &lt;组件名&gt;&lt;/组件名&gt; --&gt;</span><br><span class="line">    &lt;PannelL&gt;&lt;/PannelL&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-组件-scoped-作用"><a href="#2-组件-scoped-作用" class="headerlink" title="2.组件-scoped 作用"></a>2.组件-scoped 作用</h2><h6 id="1-作用"><a href="#1-作用" class="headerlink" title="1.作用"></a>1.作用</h6><p>解决多个组件样式名相同, 冲突问题</p>
+<h6 id="2-用法"><a href="#2-用法" class="headerlink" title="2.用法"></a>2.用法</h6><p>给 Pannel.vue 组件里 style 标签上加 scoped 属性即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 style 上加入 scoped 属性, 就会在此组件的标签上加上一个随机生成的 data-v 开头的属性</p>
+<p>而且必须是当前组件的元素, 才会有这个自定义属性, 才会被这个样式作用到</p>
+<blockquote>
+<p>总结: style 上加 scoped, 组件内的样式只在当前 vue 组件生效</p>
+</blockquote>
+<h2 id="3-组件通信-父向子-props"><a href="#3-组件通信-父向子-props" class="headerlink" title="3.组件通信_父向子-props"></a>3.组件通信_父向子-props</h2><h6 id="1-子组件中定义变量并使用-props"><a href="#1-子组件中定义变量并使用-props" class="headerlink" title="1.子组件中定义变量并使用-props"></a>1.子组件中定义变量并使用-props</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; intro &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: [&quot;intro&quot;]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.父组件中传值给子组件-在标签上写属性</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;Pannel :intro=&quot;msg&quot;&gt;&lt;/Pannel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import Pannel from &quot;./components/Pannel.vue&quot;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    Pannel</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      msg: &quot;这是父传过来的值&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-组件通信-子向父"><a href="#3-组件通信-子向父" class="headerlink" title="3.组件通信_子向父"></a>3.组件通信_子向父</h2><blockquote>
+<p>注意：单向数据流（父—子），父组件中的数据修改会通知子组件，反之不可以，即 props 中的数据只读！</p>
+</blockquote>
+<h6 id="1-父组件中给子组件绑定自定义事件，定义事件处理函数"><a href="#1-父组件中给子组件绑定自定义事件，定义事件处理函数" class="headerlink" title="1.父组件中给子组件绑定自定义事件，定义事件处理函数"></a>1.父组件中给子组件绑定自定义事件，定义事件处理函数</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;Pannel</span><br><span class="line">      v-for=&quot;(item, index) in list&quot;</span><br><span class="line">      :key=&quot;item.id&quot;</span><br><span class="line">      :intro=&quot;item.msg&quot;</span><br><span class="line">      :num=&quot;item.price&quot;</span><br><span class="line">      :index=&quot;index&quot;</span><br><span class="line">      @sub=&quot;subHandler&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/Pannel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import Pannel from &quot;./components/Pannel.vue&quot;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    Pannel</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      list: [</span><br><span class="line">        &#123; id: 1, msg: &quot;这是父传过来的值1&quot;, price: 10 &#125;,</span><br><span class="line">        &#123; id: 2, msg: &quot;这是父穿过来的值2&quot;, price: 20 &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    subHandler(index, num) &#123;</span><br><span class="line">      //...自定义函数</span><br><span class="line">      this.list[index].price += num</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-子组件在恰当的时间触发事件"><a href="#2-子组件在恰当的时间触发事件" class="headerlink" title="2.子组件在恰当的时间触发事件"></a>2.子组件在恰当的时间触发事件</h6><h6 id="3-使用-this-emit-‘自定义事件名’，参数-1，参数-2-方法触发父组件绑定的自定义事件"><a href="#3-使用-this-emit-‘自定义事件名’，参数-1，参数-2-方法触发父组件绑定的自定义事件" class="headerlink" title="3.使用 this.$emit(‘自定义事件名’，参数 1，参数 2) 方法触发父组件绑定的自定义事件"></a>3.使用 this.$emit(‘自定义事件名’，参数 1，参数 2) 方法触发父组件绑定的自定义事件</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; intro &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; num &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;fn&quot;&gt;+num&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: [&quot;intro&quot;, &quot;index&quot;, &quot;num&quot;],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fn() &#123;</span><br><span class="line">      this.$emit(&quot;sub&quot;, this.index, 1)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这里在父组件中 @事件类型=’处理函数‘ 在 methods 中 声明这个函数，在子组件中 this.$emit(‘事件类型’，[参数 1]，[参数 2]) ( [ ] 中的内容表示可要可不要)</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自我介绍</title>
+    <url>/2021/11/15/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>
