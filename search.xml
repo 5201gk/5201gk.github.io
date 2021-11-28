@@ -408,10 +408,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/11/27/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<p>title: 毕业设计<br>date: 2021-10-1 21:02:11<br>tags:</p>
-<h2 id="1-后端接口-项目介绍"><a href="#1-后端接口-项目介绍" class="headerlink" title="1.后端接口 -项目介绍"></a>1.后端接口 -项目介绍</h2><blockquote>
+    <title>毕业设计</title>
+    <url>/2021/10/01/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<h2 id="1-后端接口-项目介绍"><a href="#1-后端接口-项目介绍" class="headerlink" title="1.后端接口 -项目介绍"></a>1.后端接口 -项目介绍</h2><blockquote>
 <p>基于JavaScript ,node.js 完成后端接口和请求 ，基于html，css 完成前端页面</p>
 </blockquote>
 <h5 id="项目功能："><a href="#项目功能：" class="headerlink" title="项目功能："></a>项目功能：</h5><ol>
