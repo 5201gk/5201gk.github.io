@@ -694,5 +694,8 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 更新用户头像的处理函数</span></span><br><span class="line"><span class="built_in">exports</span>.updateAvatar = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 更新用户头像的 sql 字段</span></span><br><span class="line">  <span class="keyword">const</span> sql = <span class="string">&#x27;update ev_users set user_pic=? where id=?&#x27;</span></span><br><span class="line"></span><br><span class="line">  db.query(sql, [req.body.avatar, req.user.id], <span class="function">(<span class="params">err, results</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// SQL 语句失败</span></span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> res.cc(err)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// SQL 语句成功，但是影响行数不等于 1</span></span><br><span class="line">    <span class="keyword">if</span> (results.affectedRows !== <span class="number">1</span>) <span class="keyword">return</span> res.cc(<span class="string">&#x27;更新头像失败！&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 更新用户头像成功</span></span><br><span class="line">    <span class="keyword">return</span> res.cc(<span class="string">&#x27;更新头像成功！&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
+      <tags>
+        <tag>论文</tag>
+      </tags>
   </entry>
 </search>
