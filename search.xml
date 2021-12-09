@@ -19,7 +19,7 @@
 2. App.vue - Vue 页面入口
 3. index.html - 网页入口
 </code></pre>
-<h2 id="8-vue-指令？"><a href="#8-vue-指令？" class="headerlink" title="8. vue 指令？"></a>8. vue 指令？</h2><h6 id="1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”"><a href="#1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”" class="headerlink" title="1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”"></a>1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”</h6><h6 id="2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”"><a href="#2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”" class="headerlink" title="2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”"></a>2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”</h6><pre><code>   1. Vue 事件处理函数，如何拿到事件对象？
+<h2 id="8-vue-指令"><a href="#8-vue-指令" class="headerlink" title="8. vue 指令"></a>8. vue 指令</h2><h6 id="1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”"><a href="#1-v-bind-属性名-”Vue-变量”-简写-属性名-”Vue-变量”" class="headerlink" title="1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”"></a>1. v-bind:属性名=”Vue 变量” 简写 :属性名=”Vue 变量”</h6><h6 id="2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”"><a href="#2-v-on-事件名-”methods-里的函数名”-简写-事件名-”methods-里的函数名”" class="headerlink" title="2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”"></a>2. v-on:事件名=”methods 里的函数名” 简写 @事件名=”methods 里的函数名”</h6><pre><code>   1. Vue 事件处理函数，如何拿到事件对象？
       1. 无实参，直接用第一个形参接收
       2. 有实参，手动传入$event
    2. Vue 有哪些主要修饰符，都有什么功能？
@@ -693,9 +693,108 @@
 <li><p>调用 <code>db.query()</code> 执行 <code>SQL</code> 语句，更新对应用户的头像</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 更新用户头像的处理函数</span></span><br><span class="line"><span class="built_in">exports</span>.updateAvatar = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 更新用户头像的 sql 字段</span></span><br><span class="line">  <span class="keyword">const</span> sql = <span class="string">&#x27;update ev_users set user_pic=? where id=?&#x27;</span></span><br><span class="line"></span><br><span class="line">  db.query(sql, [req.body.avatar, req.user.id], <span class="function">(<span class="params">err, results</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// SQL 语句失败</span></span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> res.cc(err)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// SQL 语句成功，但是影响行数不等于 1</span></span><br><span class="line">    <span class="keyword">if</span> (results.affectedRows !== <span class="number">1</span>) <span class="keyword">return</span> res.cc(<span class="string">&#x27;更新头像失败！&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 更新用户头像成功</span></span><br><span class="line">    <span class="keyword">return</span> res.cc(<span class="string">&#x27;更新头像成功！&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
+<h2 id="10-获取文章分类列表"><a href="#10-获取文章分类列表" class="headerlink" title="10. 获取文章分类列表"></a>10. 获取文章分类列表</h2><h4 id="10-1-创建表结构"><a href="#10-1-创建表结构" class="headerlink" title="10.1 创建表结构"></a>10.1 创建表结构</h4><img src="E:/%E8%AF%BE%E4%BB%B6/node%E7%AC%94%E8%AE%B0/node_notes/Day_008/%E7%AC%94%E8%AE%B0/images/Day_008/001%20-%20%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E7%9A%84%E8%A1%A8.png" style="zoom:80%;" />
+
+
+
+
+
+<h4 id="10-2-新增两条初始化的数据"><a href="#10-2-新增两条初始化的数据" class="headerlink" title="10.2 新增两条初始化的数据"></a>10.2 新增两条初始化的数据</h4><img src="E:/%E8%AF%BE%E4%BB%B6/node%E7%AC%94%E8%AE%B0/node_notes/Day_008/%E7%AC%94%E8%AE%B0/images/Day_008/002%20-%20%E4%B8%A4%E6%9D%A1%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%95%B0%E6%8D%AE.png" style="zoom:80%;" />
+
+
+
+
+
+
+
+<h3 id="10-3-获取文章分类列表"><a href="#10-3-获取文章分类列表" class="headerlink" title="10.3 获取文章分类列表"></a>10.3 获取文章分类列表</h3><h4 id="10-3-1-实现步骤"><a href="#10-3-1-实现步骤" class="headerlink" title="10.3.1 实现步骤"></a>10.3.1 实现步骤</h4><ol>
+<li>初始化路由模块</li>
+<li>初始化路由处理函数模块</li>
+<li>获取文章分类列表数据</li>
+</ol>
+<h4 id="10-3-2-初始化路由模块"><a href="#10-3-2-初始化路由模块" class="headerlink" title="10.3.2 初始化路由模块"></a>10.3.2 初始化路由模块</h4><ol>
+<li><p>创建  <code>/router/artcate.js</code> 路由模块，并初始化如下的代码结构</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// // 导入 express</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建路由对象</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取文章分类的列表数据</span></span><br><span class="line">router.get(<span class="string">&#x27;/cates&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.send(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向外共享路由对象</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>在 <code>app.js</code> 中导入并使用文章分类的路由模块</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导入并使用文章分类路由模块</span></span><br><span class="line"><span class="keyword">const</span> artCateRouter = <span class="built_in">require</span>(<span class="string">&#x27;./router/userinfo&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为文章分类的路由挂载统一的访问前缀 /my/article</span></span><br><span class="line">app.use(<span class="string">&#x27;/my/article&#x27;</span>, artCateRouter)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="10-3-3-初始化路由处理函数模块"><a href="#10-3-3-初始化路由处理函数模块" class="headerlink" title="10.3.3 初始化路由处理函数模块"></a>10.3.3 初始化路由处理函数模块</h4><ol>
+<li><p>创建 <code>/router_handler/artcate.js</code> 路由处理函数模块，并初始化如下的代码结构</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取文章分类列表数据的处理函数</span></span><br><span class="line"><span class="built_in">exports</span>.getArticleCates = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.send(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>修改 <code>/router/artcate.js</code> 中的代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// // 导入 express</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建路由对象</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"><span class="comment">// 导入文章分类的路由处理函数模块</span></span><br><span class="line"><span class="keyword">const</span> artcate_handler = <span class="built_in">require</span>(<span class="string">&#x27;../router_handler/artcate&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取文章分类的列表数据</span></span><br><span class="line">router.get(<span class="string">&#x27;/cates&#x27;</span>, artcate_handler.getArticleCates)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向外共享路由对象</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="10-3-4-实现获取文章分类列表数据的功能"><a href="#10-3-4-实现获取文章分类列表数据的功能" class="headerlink" title="10.3.4 实现获取文章分类列表数据的功能"></a>10.3.4 实现获取文章分类列表数据的功能</h4><ol>
+<li><p>在 <code>/router_handler/artcate.js</code> 头部导入数据库操作模块</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导入数据库操作模块</span></span><br><span class="line"><span class="keyword">const</span> db = <span class="built_in">require</span>(<span class="string">&#x27;../db/index&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>定义 <code>SQL</code> 语句</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义查询分类列表数据的 SQL 语句</span></span><br><span class="line"><span class="comment">// is_delete 为 0 表示没有被 标记为删除 的数据</span></span><br><span class="line"><span class="keyword">const</span> sql = <span class="string">&#x27;select * from ev_article_cate where is_delete=0 order by id asc&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>调用 <code>db.query()</code> 执行 <code>SQL</code> 语句</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 调用 db.query() 执行 SQL 语句</span></span><br><span class="line">db.query(sql, <span class="function">(<span class="params">err, results</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// SQL 语句执行失败</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> res.cc(err)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// SQL 语句执行成功</span></span><br><span class="line">  res.send(&#123;</span><br><span class="line">    <span class="attr">status</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">message</span>: <span class="string">&#x27;获取文章分类列表成功！&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: results,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
       <tags>
         <tag>论文</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/11/29/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<h2 id="第一次面试"><a href="#第一次面试" class="headerlink" title="第一次面试"></a>第一次面试</h2><h4 id="1-什么是内存泄漏？"><a href="#1-什么是内存泄漏？" class="headerlink" title="1.什么是内存泄漏？"></a>1.什么是内存泄漏？</h4><p>内存泄漏是指：内存泄漏也称作 <strong>存储泄露，</strong>用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。<strong>就是该内存空间使用完毕后未收回</strong></p>
+<h4 id="2-什么是bfc？"><a href="#2-什么是bfc？" class="headerlink" title="2.什么是bfc？"></a>2.什么是bfc？</h4><p>BFC直译为 <strong>块级格式化上下文</strong>，它是一个独立的渲染区域，只有 Block-level box 参与，它规定了内部的Block-level Box 如何布局，并且这个区域与外部毫不相干</p>
+<h5 id="哪些元素会生成bfc："><a href="#哪些元素会生成bfc：" class="headerlink" title="哪些元素会生成bfc："></a>哪些元素会生成bfc：</h5><ol>
+<li>根元素</li>
+<li>float 属性不为 none</li>
+<li>position 为 absolute 或 fixed</li>
+<li>diplay 为 inline-block , table-cell, table-caption, flex , inline-flex</li>
+<li>overflow 不为 visible</li>
+</ol>
+<h4 id="3-position属性的4个值"><a href="#3-position属性的4个值" class="headerlink" title="3.position属性的4个值"></a>3.position属性的4个值</h4><ol>
+<li>absolute; 绝对定位</li>
+<li>relative; 相对定位</li>
+<li>fixed; 固定定位</li>
+<li>static  （默认） 静态定位</li>
+</ol>
+<h4 id="4-apply-和-bind-的区别"><a href="#4-apply-和-bind-的区别" class="headerlink" title="4.apply() 和 bind() 的区别"></a>4.apply() 和 bind() 的区别</h4><ol>
+<li>apply 会调用函数并改变this指向</li>
+<li>apply 传递参数中 第二个参数 必须是数组形式</li>
+<li>bind 不会调用函数 可以改变 this 指向 例如改变定时器内的的 this 指向</li>
+</ol>
+<h4 id="5-输出一个数组中-三个元素相加等于-0-的所有组合"><a href="#5-输出一个数组中-三个元素相加等于-0-的所有组合" class="headerlink" title="5. 输出一个数组中 三个元素相加等于 0 的所有组合"></a>5. 输出一个数组中 三个元素相加等于 0 的所有组合</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;arr.length;i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> k = i+<span class="number">1</span>; k&lt;arr.length;k++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=k+<span class="number">1</span>; j&lt;arr.length;j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i]+arr[k]+arr[j]===<span class="number">0</span>) &#123;</span><br><span class="line">				<span class="built_in">console</span>.log([arr[i],arr[k],arr[j]])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二次面试"><a href="#第二次面试" class="headerlink" title="第二次面试"></a>第二次面试</h2><h4 id="1-http状态码（常见）"><a href="#1-http状态码（常见）" class="headerlink" title="1.http状态码（常见）"></a>1.http状态码（常见）</h4><ol>
+<li>200：请求成功</li>
+<li>400：请求格式错误</li>
+<li>404：请求失败</li>
+<li>500：服务器出错</li>
+</ol>
+<h4 id="2-addEventListener-事件监听"><a href="#2-addEventListener-事件监听" class="headerlink" title="2.addEventListener 事件监听"></a>2.addEventListener 事件监听</h4><p>addEventListener(Etype，EventName，Boolean)</p>
+<ol>
+<li>Etype：绑定事件的类型 如果 click,keydown,mousemove, <strong>使用addEventListener绑定事件时不用写on</strong></li>
+<li>EventName：绑定事件的名称，也就是要写的函数</li>
+<li>Boolean：默认为false 代表冒泡阶段执行，true 代表不会阶段执行</li>
+</ol>
+<h4 id="3-Git-工具中-关于分支的指令"><a href="#3-Git-工具中-关于分支的指令" class="headerlink" title="3.Git 工具中 关于分支的指令"></a>3.Git 工具中 关于分支的指令</h4><ol>
+<li>git branch 分支名  （新建分支）</li>
+<li>git branch -d 分支名 （删除本地分支）</li>
+<li>git checkout -b 分支名 （切换分支）</li>
+<li>git merge 分支名 （合并当前分支和指定分支名，若有冲突解决冲突）</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/12/05/%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<h2 id="1-爬虫介绍"><a href="#1-爬虫介绍" class="headerlink" title="1.爬虫介绍"></a>1.爬虫介绍</h2><h4 id="1-1什么是爬虫"><a href="#1-1什么是爬虫" class="headerlink" title="1.1什么是爬虫"></a>1.1什么是爬虫</h4><ol>
+<li>向指定的URL发送http请求</li>
+<li>获取响应</li>
+<li>处理数据</li>
+<li>存储数据</li>
+</ol>
+<h2 id="2-爬虫基础"><a href="#2-爬虫基础" class="headerlink" title="2.爬虫基础"></a>2.爬虫基础</h2><p>目标</p>
+<ul>
+<li><a href="http://web.itheima.com/teacher.html">http://web.itheima.com/teacher.html</a> 网站为例 下载网站中所有老师的照片</li>
+</ul>
+]]></content>
   </entry>
 </search>
