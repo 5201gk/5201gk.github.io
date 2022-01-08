@@ -738,7 +738,7 @@
       </tags>
   </entry>
   <entry>
-    <title>面试题</title>
+    <title>面试经历</title>
     <url>/2021/10/21/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h2 id="第一次面试"><a href="#第一次面试" class="headerlink" title="第一次面试"></a>第一次面试</h2><h4 id="1-什么是内存泄漏？"><a href="#1-什么是内存泄漏？" class="headerlink" title="1.什么是内存泄漏？"></a>1.什么是内存泄漏？</h4><p>内存泄漏是指：内存泄漏也称作 <strong>存储泄露，</strong>用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。<strong>就是该内存空间使用完毕后未收回</strong></p>
 <h4 id="2-什么是bfc？"><a href="#2-什么是bfc？" class="headerlink" title="2.什么是bfc？"></a>2.什么是bfc？</h4><p>BFC直译为 <strong>块级格式化上下文</strong>，它是一个独立的渲染区域，只有 Block-level box 参与，它规定了内部的Block-level Box 如何布局，并且这个区域与外部毫不相干</p>
@@ -822,7 +822,7 @@
       </tags>
   </entry>
   <entry>
-    <title>面试题</title>
+    <title>2021年高频面试题</title>
     <url>/2021/10/25/2021%E5%B9%B4%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
     <content><![CDATA[<h4 id="1-js的数据类型"><a href="#1-js的数据类型" class="headerlink" title="1.js的数据类型"></a>1.js的数据类型</h4><ol>
 <li><p>基本数据类型：string number null  undefined boolean symbol  biglnt</p>
@@ -1133,7 +1133,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>面试题</title>
+    <title>前端常见高频面试题</title>
     <url>/2021/11/01/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="前端常见高频面试题"><a href="#前端常见高频面试题" class="headerlink" title="前端常见高频面试题"></a>前端常见高频面试题</h1><p>[TOC]</p>
 <h3 id="1、什么是mvvm-、-mvc-模型？"><a href="#1、什么是mvvm-、-mvc-模型？" class="headerlink" title="1、什么是mvvm  、 mvc 模型？"></a>1、什么是mvvm  、 mvc 模型？</h3><p><img src="./images/mvc.jpg"></p>
